@@ -1,0 +1,10 @@
+GET / HTTP/1.1
+Host: rose.cs.uky.edu:7000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: en-US,en;q=0.8
+Cookie: __utma=43166241.465254278.1481496246.1481496246.1481496246.1; __utmz=43166241.1481496246.1.1.utmcsr=google|utmccn=(organic)|utmcmd=organic|utmctr=(not               0x2acrovided); SESS940e80dfe8f87cec5d3ea171129751af=ov7nh28hcbe7sc7dl9ljbs3na6; _ga=GA1.2.465254278.1481496246
