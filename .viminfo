@@ -11,8 +11,8 @@
 ~MSle0~/requestedFile
 
 # Command Line History (newest to oldest):
-:wq
 :q
+:wq
 :w
 :q!
 :Q
@@ -94,18 +94,24 @@
 	:
 
 # File marks:
-'0  6  0  ~/HTML/xarn_translate.cgi
-'1  1  0  ~/HTML/xarn_translate.cgi
-'2  50  59  ~/HTML/p0_python.cgi
-'3  35  5  ~/HTML/p0_python.cgi
-'4  57  113  ~/HTML/p0_python.cgi
-'5  51  26  ~/HTML/p0_python.cgi
-'6  47  4  ~/HTML/p0_python.cgi
-'7  78  14  ~/HTML/p0_python.cgi
-'8  28  16  ~/HTML/p0_python.cgi
-'9  38  18  ~/HTML/p0_python.cgi
+'0  15  0  ~/HTML/p0_basic.html
+'1  10  4  ~/HTML/p0_basic.html
+'2  6  31  ~/HTML/p0_basic.html
+'3  2  135  ~/.git/COMMIT_EDITMSG
+'4  6  0  ~/HTML/xarn_translate.cgi
+'5  1  0  ~/HTML/xarn_translate.cgi
+'6  50  59  ~/HTML/p0_python.cgi
+'7  35  5  ~/HTML/p0_python.cgi
+'8  57  113  ~/HTML/p0_python.cgi
+'9  51  26  ~/HTML/p0_python.cgi
 
 # Jumplist (newest first):
+-'  15  0  ~/HTML/p0_basic.html
+-'  6  26  ~/HTML/p0_basic.html
+-'  1  0  ~/HTML/p0_basic.html
+-'  10  4  ~/HTML/p0_basic.html
+-'  2  135  ~/.git/COMMIT_EDITMSG
+-'  1  0  ~/.git/COMMIT_EDITMSG
 -'  6  0  ~/HTML/xarn_translate.cgi
 -'  1  0  ~/HTML/xarn_translate.cgi
 -'  50  59  ~/HTML/p0_python.cgi
@@ -162,8 +168,6 @@
 -'  1  0  ~/HTML/HomeworkFile.txt
 -'  1  0  ~/HTML/Homework
 -'  1  0  ~/HTML/test.txt
--'  10  4  ~/HTML/p0_basic.html
--'  1  0  ~/HTML/p0_basic.html
 -'  83  28  ~/HTML/p0_python.cgi
 -'  3  20  ~/HTML/p0_basic.html
 -'  9  25  ~/HTML/p0_basic.html
@@ -199,13 +203,31 @@
 -'  57  113  ~/HTML/p0_python.cgi
 -'  56  13  ~/HTML/p0_python.cgi
 -'  51  26  ~/HTML/p0_python.cgi
--'  60  0  ~/HTML/p0_python.cgi
--'  39  0  ~/HTML/p0_python.cgi
--'  17  0  ~/HTML/p0_python.cgi
--'  13  0  ~/HTML/p0_python.cgi
--'  10  0  ~/HTML/p0_python.cgi
 
 # History of marks within files (newest to oldest):
+
+> ~/HTML/p0_basic.html
+	"	15	0
+	^	6	32
+	.	6	14
+	+	2	18
+	+	7	62
+	+	8	56
+	+	9	56
+	+	11	37
+	+	5	33
+	+	7	17
+	+	8	13
+	+	9	11
+	+	2	71
+	+	3	20
+	+	6	14
+
+> ~/.git/COMMIT_EDITMSG
+	"	2	135
+	^	2	136
+	.	2	135
+	+	2	135
 
 > ~/HTML/xarn_translate.cgi
 	"	6	0
@@ -326,22 +348,6 @@
 
 > ~/HTML/test.txt
 	"	1	0
-
-> ~/HTML/p0_basic.html
-	"	10	4
-	^	3	21
-	.	3	20
-	+	2	18
-	+	7	62
-	+	8	56
-	+	9	56
-	+	11	37
-	+	5	33
-	+	7	17
-	+	8	13
-	+	9	11
-	+	2	71
-	+	3	20
 
 > ~/HTML/uptime.cgi
 	"	5	0
