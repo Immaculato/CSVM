@@ -11,11 +11,11 @@
 ~MSle0~/requestedFile
 
 # Command Line History (newest to oldest):
-:q
 :wq
+:q
+:w
 :q!
 :Q
-:w
 :WQ
 
 # Search String History (newest to oldest):
@@ -41,59 +41,132 @@
 # Input Line History (newest to oldest):
 
 # Registers:
-"0	CHAR	0
-	<!DOCTYPE html>
-	<html>
-	<head>
-	<title>Tristan Basil' Webpage</title>
+""0	CHAR	0
+	print ".allWords{" + ("color: red;}" if invalidFlag else "}")
 	
-""1	CHAR	0
-	#!/bin/sh
-	echo "Content-type: text/html\n"
-	/bin/date
-"2	CHAR	0
-			 Homework3Webpage.zip  myserver		      tristanaltpic.jpg
-	
+"1	LINE	0
+	    print invalidFlag
+"2	LINE	0
+	    fromLanguage = "" if (fromLanguage is None) else fromLanguage = fromLanguage.lower()
 "3	CHAR	0
-	e	      test.gif
 	
-"4	CHAR	0
-	 index.html	      test
-	a.out				 
-"5	CHAR	0
-	//echoBuffer = calloc(RCVBUFSIZE, 1);        /* Buffer for echo string */
+	       toTranslate = ""
+	       fromLanguage = ""
+	       toLanguage = ""
 	
+	
+"4	LINE	0
+	       translated = ""
+"5	LINE	0
+	    "" if toTranslate == null else toTransla
 "6	CHAR	0
-	//printf("HERE IS THE FILETYPE: %d\n\n\n", fileType);
+	print "Content-type:text/html\n\n"
+	    print "<html>"
+	    print "<style>.blue{color: blue;} .red{color: red;}</style>"
+	    print "<body>"
 	
 "7	CHAR	0
-		//printf(wholeBuffer, ((Kcount-1)*RCVBUFSIZE)+recvMsgSize);
-		//if (recvMsgSize == 1000) recv(clntSocket, echoBuffer, RCVBUFSIZE, 0);
-	        /* Echo message back to client */
-	        //if (send(clntSocket, echoBuffer, recvMsgSize, 0) != recvMsgSize)
-	        //    DieWithError("send() failed");
-"8	CHAR	0
-	//we need to allocate more space for the incoming message. make a new buffer, which holds 1k more than the last.
-		
-"9	CHAR	0
-	//copy over the contents of previous whole message.
 	
+	    result = translate(toTranslate, fromLa
+"8	CHAR	0
+	
+	def doit(a, b, c):
+	    print "Parameters: ", a, " ", b, " ", c
+	
+	
+"9	CHAR	0
+	#open the file
+	    filename = "xarn_language.txt"
+	    file = open(filename, "r")
+	    #for each line in the file, look for the specified language from the user.
+	    for line in file:
+	        parsedLine = line.split(',')
+		#if there aren't 4 sections in the line, we have a problem.
+		if parsedLine.size != 4:
+			print 'error'
+		#if the specified languages are found in the file, we should check for the word.
+		if (parsedLine[0]==fromLanguage && parsedline[2]==toLanguage):
+			print 'something'
+		else if (parsedLine[0] == toLanguage && parsedLine[2]==fromLanguage):
+			if (parsedline[0] == toLanguage 
+		
 "-	CHAR	0
-	b
+	:
 
 # File marks:
-'0  5  0  ~/HTML/uptime.cgi
-'1  1  0  ~/HTML/index.html
-'2  4  23  ~/HTML/uptime.cgi
-'3  6  34  ~/HTML/uptime.cgi
-'4  4  8  ~/HTML/headerExample.cgi
-'5  2  28  ~/CS316/ScriptExamples/headerExample.cgi
-'6  3  8  ~/CS316/ScriptExamples/shellExample
-'7  1  0  ~/CS316/ScriptExamples/printdate
-'8  3  18  ~/CS316/Demo1/rubyExample
-'9  2  0  ~/CS316/Demo1/pythonexample
+'0  6  0  ~/HTML/xarn_translate.cgi
+'1  1  0  ~/HTML/xarn_translate.cgi
+'2  50  59  ~/HTML/p0_python.cgi
+'3  35  5  ~/HTML/p0_python.cgi
+'4  57  113  ~/HTML/p0_python.cgi
+'5  51  26  ~/HTML/p0_python.cgi
+'6  47  4  ~/HTML/p0_python.cgi
+'7  78  14  ~/HTML/p0_python.cgi
+'8  28  16  ~/HTML/p0_python.cgi
+'9  38  18  ~/HTML/p0_python.cgi
 
 # Jumplist (newest first):
+-'  6  0  ~/HTML/xarn_translate.cgi
+-'  1  0  ~/HTML/xarn_translate.cgi
+-'  50  59  ~/HTML/p0_python.cgi
+-'  1  0  ~/HTML/p0_python.cgi
+-'  35  5  ~/HTML/p0_python.cgi
+-'  31  64  ~/HTML/p0_python.cgi
+-'  57  113  ~/HTML/p0_python.cgi
+-'  56  13  ~/HTML/p0_python.cgi
+-'  51  26  ~/HTML/p0_python.cgi
+-'  60  0  ~/HTML/p0_python.cgi
+-'  39  0  ~/HTML/p0_python.cgi
+-'  17  0  ~/HTML/p0_python.cgi
+-'  13  0  ~/HTML/p0_python.cgi
+-'  10  0  ~/HTML/p0_python.cgi
+-'  47  4  ~/HTML/p0_python.cgi
+-'  78  14  ~/HTML/p0_python.cgi
+-'  28  16  ~/HTML/p0_python.cgi
+-'  9  0  ~/HTML/p0_python.cgi
+-'  76  14  ~/HTML/p0_python.cgi
+-'  81  0  ~/HTML/p0_python.cgi
+-'  8  0  ~/HTML/p0_python.cgi
+-'  38  18  ~/HTML/p0_python.cgi
+-'  84  9  ~/HTML/p0_python.cgi
+-'  75  26  ~/HTML/p0_python.cgi
+-'  2  0  ~/HTML/p0_python.cgi
+-'  77  25  ~/HTML/p0_python.cgi
+-'  73  40  ~/HTML/p0_python.cgi
+-'  14  0  ~/HTML/p0_python.cgi
+-'  67  50  ~/HTML/p0_python.cgi
+-'  27  0  ~/HTML/p0_python.cgi
+-'  80  50  ~/HTML/p0_python.cgi
+-'  72  26  ~/HTML/p0_python.cgi
+-'  19  0  ~/HTML/p0_python.cgi
+-'  66  44  ~/HTML/p0_python.cgi
+-'  68  93  ~/HTML/p0_python.cgi
+-'  42  16  ~/HTML/p0_python.cgi
+-'  15  0  ~/HTML/p0_python.cgi
+-'  43  48  ~/HTML/p0_python.cgi
+-'  44  3  ~/HTML/p0_python.cgi
+-'  55  21  ~/HTML/p0_python.cgi
+-'  53  24  ~/HTML/p0_python.cgi
+-'  54  113  ~/HTML/p0_python.cgi
+-'  58  25  ~/HTML/p0_python.cgi
+-'  65  82  ~/HTML/p0_python.cgi
+-'  29  18  ~/HTML/p0_python.cgi
+-'  21  29  ~/HTML/p0_python.cgi
+-'  30  10  ~/HTML/p0_python.cgi
+-'  34  24  ~/HTML/p0_python.cgi
+-'  26  18  ~/HTML/p0_python.cgi
+-'  33  2  ~/HTML/p0_python.cgi
+-'  32  9  ~/HTML/p0_python.cgi
+-'  18  0  ~/HTML/p0_python.cgi
+-'  1  0  ~/HTML/p0_
+-'  1  0  ~/HTML/HomeworkFile.txt
+-'  1  0  ~/HTML/Homework
+-'  1  0  ~/HTML/test.txt
+-'  10  4  ~/HTML/p0_basic.html
+-'  1  0  ~/HTML/p0_basic.html
+-'  83  28  ~/HTML/p0_python.cgi
+-'  3  20  ~/HTML/p0_basic.html
+-'  9  25  ~/HTML/p0_basic.html
 -'  5  0  ~/HTML/uptime.cgi
 -'  1  0  ~/HTML/uptime.cgi
 -'  1  0  ~/HTML/index.html
@@ -108,92 +181,167 @@
 -'  1  0  ~/CS316/ScriptExamples/printdate
 -'  3  18  ~/CS316/Demo1/rubyExample
 -'  1  0  ~/CS316/Demo1/rubyExample
--'  2  0  ~/CS316/Demo1/pythonexample
--'  1  0  ~/CS316/Demo1/pythonexample
--'  3  20  ~/CS316/Demo1/pythonexample
--'  3  23  ~/CS316/printdatePerl
--'  1  0  ~/CS316/printdatePerl
--'  1  8  ~/CS316/printdate
--'  117  56  ~/Project1/HandleTCPClient.c
--'  110  0  ~/Project1/HandleTCPClient.c
--'  1  0  ~/Project1/HandleTCPClient.c
--'  46  0  ~/Project1/HandleTCPClient.c
--'  12  0  ~/Project1/README.txt
--'  1  0  ~/Project1/README.txt
--'  1  0  ~/Project1/finaltestdir/README.txt
--'  45  3  ~/Project1/HandleTCPClient.c
--'  14  30  ~/Project1/README.txt
--'  6  15  ~/Project1/README.txt
--'  1  7  ~/Project1/Makefile
--'  4  4  ~/Project1/Makefile
--'  2  0  ~/Project1/HandleTCPClient.c
--'  15  0  ~/Project1/HomeworkWebPage.html
--'  1  0  ~/Project1/HomeworkWebPage.html
--'  9  26  ~/Project1/TCPEcho-Server-Fork.c
--'  25  0  ~/Project1/TCPEcho-Server-Fork.c
--'  23  0  ~/Project1/TCPEcho-Server-Fork.c
--'  18  0  ~/Project1/TCPEcho-Server-Fork.c
--'  12  0  ~/Project1/TCPEcho-Server-Fork.c
--'  3  0  ~/Project1/TCPEcho-Server-Fork.c
--'  1  0  ~/Project1/TCPEcho-Server-Fork.c
--'  15  0  ~/Project1/HandleTCPClient.c
--'  81  48  ~/Project1/HandleTCPClient.c
--'  156  0  ~/Project1/HandleTCPClient.c
--'  164  0  ~/Project1/HandleTCPClient.c
--'  133  0  ~/Project1/HandleTCPClient.c
--'  129  0  ~/Project1/HandleTCPClient.c
--'  126  0  ~/Project1/HandleTCPClient.c
--'  34  0  ~/Project1/HandleTCPClient.c
--'  24  0  ~/Project1/HandleTCPClient.c
--'  127  0  ~/Project1/HandleTCPClient.c
--'  22  0  ~/Project1/HandleTCPClient.c
--'  20  0  ~/Project1/HandleTCPClient.c
--'  17  0  ~/Project1/HandleTCPClient.c
--'  155  27  ~/Project1/HandleTCPClient.c
--'  32  1  ~/Project1/HandleTCPClient.c
--'  37  47  ~/Project1/HandleTCPClient.c
--'  38  53  ~/Project1/HandleTCPClient.c
--'  86  2  ~/Project1/HandleTCPClient.c
--'  31  2  ~/Project1/HandleTCPClient.c
--'  63  38  ~/Project1/HandleTCPClient.c
--'  163  41  ~/Project1/HandleTCPClient.c
--'  162  8  ~/Project1/HandleTCPClient.c
--'  131  20  ~/Project1/HandleTCPClient.c
--'  130  25  ~/Project1/HandleTCPClient.c
--'  47  14  ~/Project1/HandleTCPClient.c
--'  143  19  ~/Project1/HandleTCPClient.c
--'  39  14  ~/Project1/HandleTCPClient.c
--'  4  31  ~/Project1/HandleTCPClient.c
--'  161  21  ~/Project1/HandleTCPClient.c
--'  150  31  ~/Project1/HandleTCPClient.c
--'  118  38  ~/Project1/HandleTCPClient.c
--'  7  20  ~/Project1/HandleTCPClient.c
--'  53  0  ~/Project1/HandleTCPClient.c
--'  77  0  ~/Project1/HandleTCPClient.c
--'  116  33  ~/Project1/HandleTCPClient.c
--'  124  46  ~/Project1/HandleTCPClient.c
--'  153  66  ~/Project1/HandleTCPClient.c
--'  115  84  ~/Project1/HandleTCPClient.c
--'  85  33  ~/Project1/HandleTCPClient.c
--'  128  0  ~/Project1/HandleTCPClient.c
--'  125  0  ~/Project1/HandleTCPClient.c
--'  132  0  ~/Project1/HandleTCPClient.c
--'  142  19  ~/Project1/HandleTCPClient.c
--'  160  21  ~/Project1/HandleTCPClient.c
--'  149  31  ~/Project1/HandleTCPClient.c
--'  123  46  ~/Project1/HandleTCPClient.c
--'  154  5  ~/Project1/HandleTCPClient.c
--'  152  66  ~/Project1/HandleTCPClient.c
--'  114  84  ~/Project1/HandleTCPClient.c
--'  62  38  ~/Project1/HandleTCPClient.c
--'  52  0  ~/Project1/HandleTCPClient.c
--'  76  0  ~/Project1/HandleTCPClient.c
--'  84  33  ~/Project1/HandleTCPClient.c
--'  40  16  ~/Project1/HandleTCPClient.c
--'  88  2  ~/Project1/HandleTCPClient.c
--'  83  15  ~/Project1/HandleTCPClient.c
+-'  46  20  ~/HTML/p0_python.cgi
+-'  59  0  ~/HTML/p0_python.cgi
+-'  36  18  ~/HTML/p0_python.cgi
+-'  74  26  ~/HTML/p0_python.cgi
+-'  79  50  ~/HTML/p0_python.cgi
+-'  71  26  ~/HTML/p0_python.cgi
+-'  41  16  ~/HTML/p0_python.cgi
+-'  37  18  ~/HTML/p0_python.cgi
+-'  82  9  ~/HTML/p0_python.cgi
+-'  61  0  ~/HTML/p0_python.cgi
+-'  85  9  ~/HTML/p0_python.cgi
+-'  50  59  ~/HTML/p0_python.cgi
+-'  1  0  ~/HTML/p0_python.cgi
+-'  35  5  ~/HTML/p0_python.cgi
+-'  31  64  ~/HTML/p0_python.cgi
+-'  57  113  ~/HTML/p0_python.cgi
+-'  56  13  ~/HTML/p0_python.cgi
+-'  51  26  ~/HTML/p0_python.cgi
+-'  60  0  ~/HTML/p0_python.cgi
+-'  39  0  ~/HTML/p0_python.cgi
+-'  17  0  ~/HTML/p0_python.cgi
+-'  13  0  ~/HTML/p0_python.cgi
+-'  10  0  ~/HTML/p0_python.cgi
 
 # History of marks within files (newest to oldest):
+
+> ~/HTML/xarn_translate.cgi
+	"	6	0
+
+> ~/HTML/p0_python.cgi
+	"	50	59
+	^	50	60
+	.	50	52
+	+	53	24
+	+	54	60
+	+	55	63
+	+	44	45
+	+	42	44
+	+	43	41
+	+	44	4
+	+	45	3
+	+	42	44
+	+	43	40
+	+	42	4
+	+	43	4
+	+	42	4
+	+	43	4
+	+	42	52
+	+	43	48
+	+	42	46
+	+	43	4
+	+	41	60
+	+	42	4
+	+	80	0
+	+	64	150
+	+	75	6
+	+	75	6
+	+	75	6
+	+	75	6
+	+	75	0
+	+	66	45
+	+	67	57
+	+	68	54
+	+	68	108
+	+	68	106
+	+	71	58
+	+	72	0
+	+	71	16
+	+	66	0
+	+	65	0
+	+	66	4
+	+	67	4
+	+	68	4
+	+	68	49
+	+	68	48
+	+	71	0
+	+	72	0
+	+	74	0
+	+	75	0
+	+	79	0
+	+	75	4
+	+	67	83
+	+	68	135
+	+	68	47
+	+	68	95
+	+	71	79
+	+	73	70
+	+	74	7
+	+	76	7
+	+	67	51
+	+	68	52
+	+	70	3
+	+	69	52
+	+	69	0
+	+	71	49
+	+	47	16
+	+	47	160
+	+	47	20
+	+	73	0
+	+	77	25
+	+	73	71
+	+	74	0
+	+	76	0
+	+	75	9
+	+	76	0
+	+	47	62
+	+	8	79
+	+	77	14
+	+	27	18
+	+	36	11
+	+	47	20
+	+	28	16
+	+	37	16
+	+	78	14
+	+	47	18
+	+	47	37
+	+	48	71
+	+	49	65
+	+	50	9
+	+	47	17
+	+	50	3
+	+	51	3
+	+	50	64
+	+	51	4
+	+	50	80
+	+	56	0
+	+	57	0
+	+	56	58
+	+	57	113
+	+	50	54
+	+	31	78
+	+	33	87
+	+	50	52
+
+> ~/HTML/p0_
+	"	1	0
+
+> ~/HTML/HomeworkFile.txt
+	"	1	0
+
+> ~/HTML/Homework
+	"	1	0
+
+> ~/HTML/test.txt
+	"	1	0
+
+> ~/HTML/p0_basic.html
+	"	10	4
+	^	3	21
+	.	3	20
+	+	2	18
+	+	7	62
+	+	8	56
+	+	9	56
+	+	11	37
+	+	5	33
+	+	7	17
+	+	8	13
+	+	9	11
+	+	2	71
+	+	3	20
 
 > ~/HTML/uptime.cgi
 	"	5	0
