@@ -8,31 +8,67 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/requestedFile
+~MSle0~/gram
 
 # Command Line History (newest to oldest):
-:q
 :wq
 :w
 :q!
+:q
 :Q
 :WQ
 
 # Search String History (newest to oldest):
-?/requestedFile
-?/test
-?/DieWithError
-?/alloc
-?/calloc
-?/malloc
-?/93
-?/HTTPFILE
-?/strcmp
-?/fileType
-?/filetype
-?/Determine
-?//Determine
-? \<token\>
+?/gram
+?/nbsp
+?/active
+?/find
+?/find the current
+?/xarngrams
+?/reveal
+?/hint
+?/chooseAnagram
+?/setInstr
+?/setInstructions
+?/activateSolution
+?/cursor
+?/"l"
+?/l
+?/remove
+?/load
+?/chooseLetter
+?/whichGram
+?/console.log
+?/whichAnagram
+?/whichSolution
+?/activeSolu
+?/activeSolution
+?/revelHint
+?/doScramble
+?/revealHint
+?/107
+?/add
+?/eventListener
+?/event
+?/solution
+?/activate
+?/addListen
+?/choose
+?/chooseAna
+?/letters
+?/Count
+?/count
+?/for (i=0
+?/which
+?/angram
+?/ignoreClick
+?/ignore
+?/whichSol
+?/active1
+?/UNDE
+?/chooseAn
+?/addEventListener
+?/"letters
 
 # Expression History (newest to oldest):
 
@@ -41,196 +77,531 @@
 # Input Line History (newest to oldest):
 
 # Registers:
-""0	CHAR	0
-	print ".allWords{" + ("color: red;}" if invalidFlag else "}")
-	
-"1	LINE	0
-	    print invalidFlag
+"0	CHAR	0
+	&nbsp;
+""1	LINE	0
+				whichGram.innerHTML = "";
 "2	LINE	0
-	    fromLanguage = "" if (fromLanguage is None) else fromLanguage = fromLanguage.lower()
-"3	CHAR	0
-	
-	       toTranslate = ""
-	       fromLanguage = ""
-	       toLanguage = ""
-	
-	
+			activeElement.style.cursor = 'default';
+"3	LINE	0
+	// was clicked on.
 "4	LINE	0
-	       translated = ""
+	// There will be an object "this" that refers to the element that
 "5	LINE	0
-	    "" if toTranslate == null else toTransla
+	//
 "6	CHAR	0
-	print "Content-type:text/html\n\n"
-	    print "<html>"
-	    print "<style>.blue{color: blue;} .red{color: red;}</style>"
-	    print "<body>"
-	
+			chopLast += this.innerHTML;
+			whichGram.innerHTML = chopLast;
 "7	CHAR	0
+	//if the angram isn't maxed out, add in the chosen letter.
+		console.log("They chose letter id " + this.id + " which is " + this.innerHTML);
+		//this.style.color = 'green';
+		console.log(whichGram.innerHTML.length);
+		if (whichGram.innerHTML.length < 3) {
+			whichGram.innerHTML += this.innerHTML;
+		} else if (whichGram.innerHTML.length == 3) {
 	
-	    result = translate(toTranslate, fromLa
-"8	CHAR	0
-	
-	def doit(a, b, c):
-	    print "Parameters: ", a, " ", b, " ", c
-	
-	
-"9	CHAR	0
-	#open the file
-	    filename = "xarn_language.txt"
-	    file = open(filename, "r")
-	    #for each line in the file, look for the specified language from the user.
-	    for line in file:
-	        parsedLine = line.split(',')
-		#if there aren't 4 sections in the line, we have a problem.
-		if parsedLine.size != 4:
-			print 'error'
-		#if the specified languages are found in the file, we should check for the word.
-		if (parsedLine[0]==fromLanguage && parsedline[2]==toLanguage):
-			print 'something'
-		else if (parsedLine[0] == toLanguage && parsedLine[2]==fromLanguage):
-			if (parsedline[0] == toLanguage 
-		
+"8	LINE	0
+			[whichGram.innerHTML.length-1] 
+"9	LINE	0
+			console.log(whichGram.innerHTML[whichGram.innerHTML.length-1]);
 "-	CHAR	0
-	:
+	&nbsp;&nbsp;&nbsp;<
 
 # File marks:
-'0  15  0  ~/HTML/p0_basic.html
-'1  10  4  ~/HTML/p0_basic.html
-'2  6  31  ~/HTML/p0_basic.html
-'3  2  135  ~/.git/COMMIT_EDITMSG
-'4  6  0  ~/HTML/xarn_translate.cgi
-'5  1  0  ~/HTML/xarn_translate.cgi
-'6  50  59  ~/HTML/p0_python.cgi
-'7  35  5  ~/HTML/p0_python.cgi
-'8  57  113  ~/HTML/p0_python.cgi
-'9  51  26  ~/HTML/p0_python.cgi
+'0  113  16  ~/HTML/CS316/Linton.html
+'1  166  12  ~/HTML/CS316/Linton.html
+'2  175  3  ~/HTML/CS316/Linton.html
+'3  194  39  ~/HTML/CS316/Linton.html
+'4  99  27  ~/HTML/CS316/Linton.html
+'5  179  0  ~/HTML/CS316/Linton.html
+'6  234  0  ~/HTML/CS316/Linton.html
+'7  84  22  ~/HTML/CS316/Linton.html
+'8  133  11  ~/HTML/CS316/Linton.html
+'9  200  24  ~/HTML/CS316/Linton.html
 
 # Jumplist (newest first):
--'  15  0  ~/HTML/p0_basic.html
--'  6  26  ~/HTML/p0_basic.html
--'  1  0  ~/HTML/p0_basic.html
--'  10  4  ~/HTML/p0_basic.html
--'  2  135  ~/.git/COMMIT_EDITMSG
--'  1  0  ~/.git/COMMIT_EDITMSG
--'  6  0  ~/HTML/xarn_translate.cgi
--'  1  0  ~/HTML/xarn_translate.cgi
--'  50  59  ~/HTML/p0_python.cgi
--'  1  0  ~/HTML/p0_python.cgi
--'  35  5  ~/HTML/p0_python.cgi
--'  31  64  ~/HTML/p0_python.cgi
--'  57  113  ~/HTML/p0_python.cgi
--'  56  13  ~/HTML/p0_python.cgi
--'  51  26  ~/HTML/p0_python.cgi
--'  60  0  ~/HTML/p0_python.cgi
--'  39  0  ~/HTML/p0_python.cgi
--'  17  0  ~/HTML/p0_python.cgi
--'  13  0  ~/HTML/p0_python.cgi
--'  10  0  ~/HTML/p0_python.cgi
--'  47  4  ~/HTML/p0_python.cgi
--'  78  14  ~/HTML/p0_python.cgi
--'  28  16  ~/HTML/p0_python.cgi
--'  9  0  ~/HTML/p0_python.cgi
--'  76  14  ~/HTML/p0_python.cgi
--'  81  0  ~/HTML/p0_python.cgi
--'  8  0  ~/HTML/p0_python.cgi
--'  38  18  ~/HTML/p0_python.cgi
--'  84  9  ~/HTML/p0_python.cgi
--'  75  26  ~/HTML/p0_python.cgi
--'  2  0  ~/HTML/p0_python.cgi
--'  77  25  ~/HTML/p0_python.cgi
--'  73  40  ~/HTML/p0_python.cgi
--'  14  0  ~/HTML/p0_python.cgi
--'  67  50  ~/HTML/p0_python.cgi
--'  27  0  ~/HTML/p0_python.cgi
--'  80  50  ~/HTML/p0_python.cgi
--'  72  26  ~/HTML/p0_python.cgi
--'  19  0  ~/HTML/p0_python.cgi
--'  66  44  ~/HTML/p0_python.cgi
--'  68  93  ~/HTML/p0_python.cgi
--'  42  16  ~/HTML/p0_python.cgi
--'  15  0  ~/HTML/p0_python.cgi
--'  43  48  ~/HTML/p0_python.cgi
--'  44  3  ~/HTML/p0_python.cgi
--'  55  21  ~/HTML/p0_python.cgi
--'  53  24  ~/HTML/p0_python.cgi
--'  54  113  ~/HTML/p0_python.cgi
--'  58  25  ~/HTML/p0_python.cgi
--'  65  82  ~/HTML/p0_python.cgi
--'  29  18  ~/HTML/p0_python.cgi
--'  21  29  ~/HTML/p0_python.cgi
--'  30  10  ~/HTML/p0_python.cgi
--'  34  24  ~/HTML/p0_python.cgi
--'  26  18  ~/HTML/p0_python.cgi
--'  33  2  ~/HTML/p0_python.cgi
--'  32  9  ~/HTML/p0_python.cgi
--'  18  0  ~/HTML/p0_python.cgi
--'  1  0  ~/HTML/p0_
--'  1  0  ~/HTML/HomeworkFile.txt
--'  1  0  ~/HTML/Homework
--'  1  0  ~/HTML/test.txt
--'  83  28  ~/HTML/p0_python.cgi
--'  3  20  ~/HTML/p0_basic.html
--'  9  25  ~/HTML/p0_basic.html
--'  5  0  ~/HTML/uptime.cgi
--'  1  0  ~/HTML/uptime.cgi
--'  1  0  ~/HTML/index.html
--'  4  23  ~/HTML/uptime.cgi
--'  6  34  ~/HTML/uptime.cgi
--'  4  8  ~/HTML/headerExample.cgi
--'  1  0  ~/HTML/headerExample.cgi
--'  2  28  ~/CS316/ScriptExamples/headerExample.cgi
--'  1  0  ~/CS316/ScriptExamples/headerExample.cgi
--'  3  8  ~/CS316/ScriptExamples/shellExample
--'  1  0  ~/CS316/ScriptExamples/shellExample
--'  1  0  ~/CS316/ScriptExamples/printdate
--'  3  18  ~/CS316/Demo1/rubyExample
--'  1  0  ~/CS316/Demo1/rubyExample
--'  46  20  ~/HTML/p0_python.cgi
--'  59  0  ~/HTML/p0_python.cgi
--'  36  18  ~/HTML/p0_python.cgi
--'  74  26  ~/HTML/p0_python.cgi
--'  79  50  ~/HTML/p0_python.cgi
--'  71  26  ~/HTML/p0_python.cgi
--'  41  16  ~/HTML/p0_python.cgi
--'  37  18  ~/HTML/p0_python.cgi
--'  82  9  ~/HTML/p0_python.cgi
--'  61  0  ~/HTML/p0_python.cgi
--'  85  9  ~/HTML/p0_python.cgi
--'  50  59  ~/HTML/p0_python.cgi
--'  1  0  ~/HTML/p0_python.cgi
--'  35  5  ~/HTML/p0_python.cgi
--'  31  64  ~/HTML/p0_python.cgi
--'  57  113  ~/HTML/p0_python.cgi
--'  56  13  ~/HTML/p0_python.cgi
--'  51  26  ~/HTML/p0_python.cgi
+-'  113  16  ~/HTML/CS316/Linton.html
+-'  92  78  ~/HTML/CS316/Linton.html
+-'  83  68  ~/HTML/CS316/Linton.html
+-'  62  48  ~/HTML/CS316/Linton.html
+-'  48  50  ~/HTML/CS316/Linton.html
+-'  35  12  ~/HTML/CS316/Linton.html
+-'  26  8  ~/HTML/CS316/Linton.html
+-'  25  46  ~/HTML/CS316/Linton.html
+-'  9  48  ~/HTML/CS316/Linton.html
+-'  269  53  ~/HTML/CS316/Linton.html
+-'  267  53  ~/HTML/CS316/Linton.html
+-'  266  13  ~/HTML/CS316/Linton.html
+-'  235  34  ~/HTML/CS316/Linton.html
+-'  232  46  ~/HTML/CS316/Linton.html
+-'  230  27  ~/HTML/CS316/Linton.html
+-'  227  21  ~/HTML/CS316/Linton.html
+-'  206  33  ~/HTML/CS316/Linton.html
+-'  279  6  ~/HTML/CS316/Linton.html
+-'  277  0  ~/HTML/CS316/Linton.html
+-'  247  0  ~/HTML/CS316/Linton.html
+-'  244  0  ~/HTML/CS316/Linton.html
+-'  241  0  ~/HTML/CS316/Linton.html
+-'  238  0  ~/HTML/CS316/Linton.html
+-'  236  0  ~/HTML/CS316/Linton.html
+-'  234  0  ~/HTML/CS316/Linton.html
+-'  226  0  ~/HTML/CS316/Linton.html
+-'  223  0  ~/HTML/CS316/Linton.html
+-'  221  0  ~/HTML/CS316/Linton.html
+-'  219  0  ~/HTML/CS316/Linton.html
+-'  213  0  ~/HTML/CS316/Linton.html
+-'  202  0  ~/HTML/CS316/Linton.html
+-'  200  0  ~/HTML/CS316/Linton.html
+-'  179  0  ~/HTML/CS316/Linton.html
+-'  163  0  ~/HTML/CS316/Linton.html
+-'  161  0  ~/HTML/CS316/Linton.html
+-'  159  0  ~/HTML/CS316/Linton.html
+-'  157  0  ~/HTML/CS316/Linton.html
+-'  155  0  ~/HTML/CS316/Linton.html
+-'  153  0  ~/HTML/CS316/Linton.html
+-'  151  0  ~/HTML/CS316/Linton.html
+-'  120  35  ~/HTML/CS316/Linton.html
+-'  109  0  ~/HTML/CS316/Linton.html
+-'  81  0  ~/HTML/CS316/Linton.html
+-'  77  0  ~/HTML/CS316/Linton.html
+-'  75  0  ~/HTML/CS316/Linton.html
+-'  73  0  ~/HTML/CS316/Linton.html
+-'  51  0  ~/HTML/CS316/Linton.html
+-'  45  0  ~/HTML/CS316/Linton.html
+-'  43  0  ~/HTML/CS316/Linton.html
+-'  41  0  ~/HTML/CS316/Linton.html
+-'  37  0  ~/HTML/CS316/Linton.html
+-'  33  0  ~/HTML/CS316/Linton.html
+-'  24  0  ~/HTML/CS316/Linton.html
+-'  21  0  ~/HTML/CS316/Linton.html
+-'  18  0  ~/HTML/CS316/Linton.html
+-'  16  0  ~/HTML/CS316/Linton.html
+-'  10  0  ~/HTML/CS316/Linton.html
+-'  112  0  ~/HTML/CS316/Linton.html
+-'  214  0  ~/HTML/CS316/Linton.html
+-'  224  0  ~/HTML/CS316/Linton.html
+-'  239  0  ~/HTML/CS316/Linton.html
 
 # History of marks within files (newest to oldest):
 
+> ~/HTML/CS316/Linton.html
+	"	113	16
+	^	267	71
+	.	98	0
+	+	193	38
+	+	195	1
+	+	200	0
+	+	200	0
+	+	200	0
+	+	200	0
+	+	189	7
+	+	191	2
+	+	189	33
+	+	190	30
+	+	189	58
+	+	193	35
+	+	196	69
+	+	199	1
+	+	192	40
+	+	196	13
+	+	196	15
+	+	196	64
+	+	196	70
+	+	194	0
+	+	98	27
+	+	196	2
+	+	196	21
+	+	196	2
+	+	198	1
+	+	196	54
+	+	198	22
+	+	196	82
+	+	197	28
+	+	198	32
+	+	64	89
+	+	202	0
+	+	204	14
+	+	210	88
+	+	210	19
+	+	211	0
+	+	211	0
+	+	209	37
+	+	210	1
+	+	212	0
+	+	203	58
+	+	204	0
+	+	231	35
+	+	88	48
+	+	90	0
+	+	90	0
+	+	123	51
+	+	124	54
+	+	125	0
+	+	125	0
+	+	125	8
+	+	139	1
+	+	133	14
+	+	136	14
+	+	134	60
+	+	135	33
+	+	100	37
+	+	137	60
+	+	138	33
+	+	133	23
+	+	136	23
+	+	89	40
+	+	83	86
+	+	127	81
+	+	128	0
+	+	128	0
+	+	83	4
+	+	128	4
+	+	83	101
+	+	166	33
+	+	167	37
+	+	168	38
+	+	169	2
+	+	172	2
+	+	170	33
+	+	172	35
+	+	177	1
+	+	170	32
+	+	173	32
+	+	168	38
+	+	166	12
+	+	168	10
+	+	167	14
+	+	171	33
+	+	174	33
+	+	87	3
+	+	267	34
+	+	269	34
+	+	267	39
+	+	269	39
+	+	267	0
+	+	99	28
+	+	98	3
+	+	120	36
+	+	267	0
+	+	268	0
+	+	267	88
+	+	269	60
+	+	267	70
+	+	98	0
+
+> ~/HTML/CS316/xarn_translate.cgi
+	"	85	44
+	^	85	45
+	.	85	44
+	+	1	13
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	133	0
+	+	1	10
+	+	133	0
+	+	1	7
+	+	1	7
+	+	133	0
+	+	1	10
+	+	1	7
+	+	1	7
+	+	133	0
+	+	131	10
+	+	102	7
+	+	106	4
+	+	113	4
+	+	18	12
+	+	24	28
+	+	18	13
+	+	62	4
+	+	63	1
+	+	63	22
+	+	64	1
+	+	120	0
+	+	17	0
+	+	16	0
+	+	115	25
+	+	108	27
+	+	101	26
+	+	85	44
+
+> ~/HTML/CS316/P1.txt
+	"	23	41
+	^	21	118
+	.	20	266
+	+	9	60
+	+	12	0
+	+	9	60
+	+	12	365
+	+	12	232
+	+	12	595
+	+	13	45
+	+	13	84
+	+	16	2
+	+	13	0
+	+	14	12
+	+	15	2
+	+	17	48
+	+	17	58
+	+	18	199
+	+	16	52
+	+	18	200
+	+	19	46
+	+	19	52
+	+	20	147
+	+	21	108
+	+	21	82
+	+	21	118
+	+	22	104
+	+	22	0
+	+	22	157
+	+	22	228
+	+	23	42
+	+	24	198
+	+	8	185
+	+	20	219
+	+	9	26
+	+	20	266
+
+> ~/HTML/CS316/translate.html
+	"	1	0
+
+> ~/HTML/translate.html
+	"	18	57
+	^	18	58
+	.	18	20
+	+	2	5
+	+	2	27
+	+	7	0
+	+	2	5
+	+	3	21
+	+	6	11
+	+	7	34
+	+	1	0
+	+	1	15
+	+	2	0
+	+	10	0
+	+	7	60
+	+	8	3
+	+	20	43
+	+	21	39
+	+	16	6
+	+	17	6
+	+	18	6
+	+	16	26
+	+	17	27
+	+	18	20
+
+> ~/HTML/CS316/xarn_
+	"	1	0
+
+> ~/HTML/xarn_translate.cgi
+	"	1	0
+	^	130	0
+	.	131	0
+	+	36	12
+	+	26	24
+	+	38	112
+	+	39	0
+	+	68	54
+	+	67	48
+	+	72	2
+	+	97	102
+	+	92	15
+	+	62	23
+	+	62	20
+	+	62	19
+	+	62	1
+	+	62	20
+	+	62	2
+	+	62	11
+	+	62	1
+	+	62	13
+	+	62	1
+	+	62	5
+	+	62	13
+	+	62	1
+	+	67	0
+	+	62	1
+	+	52	41
+	+	53	0
+	+	53	1
+	+	53	16
+	+	53	1
+	+	54	2
+	+	53	60
+	+	53	1
+	+	54	0
+	+	52	1
+	+	52	5
+	+	53	1
+	+	54	1
+	+	52	12
+	+	52	5
+	+	53	0
+	+	52	1
+	+	62	4
+	+	63	3
+	+	64	3
+	+	52	0
+	+	60	0
+	+	60	92
+	+	79	0
+	+	22	18
+	+	24	0
+	+	23	27
+	+	56	23
+	+	23	93
+	+	84	53
+	+	42	33
+	+	44	7
+	+	45	7
+	+	45	7
+	+	43	7
+	+	46	19
+	+	47	20
+	+	47	0
+	+	46	19
+	+	47	1
+	+	48	1
+	+	35	0
+	+	130	4
+	+	130	3
+	+	26	0
+	+	46	27
+	+	42	4
+	+	42	11
+	+	45	27
+	+	17	21
+	+	18	0
+	+	19	0
+	+	42	0
+	+	47	0
+	+	55	0
+	+	18	12
+	+	46	10
+	+	65	0
+	+	42	27
+	+	42	27
+	+	42	41
+	+	43	14
+	+	42	27
+	+	43	0
+	+	18	12
+	+	24	55
+	+	48	21
+	+	18	12
+	+	23	37
+	+	10	0
+	+	11	0
+	+	130	0
+	+	93	1
+	+	66	0
+	+	94	0
+	+	131	0
+
+> ~/HTML/CS316/no-tab-file.txt
+	"	118	7
+	^	118	8
+	.	118	7
+	+	33	0
+	+	37	1
+	+	37	0
+	+	47	8
+	+	48	7
+	+	52	4
+	+	53	4
+	+	54	4
+	+	55	8
+	+	56	8
+	+	57	4
+	+	58	4
+	+	60	4
+	+	59	8
+	+	61	8
+	+	101	7
+	+	102	7
+	+	104	7
+	+	107	7
+	+	53	0
+	+	114	7
+	+	116	7
+	+	115	7
+	+	118	7
+
+> ~/HTML/CS316/10000charfile
+	"	1	0
+
+> ~/HTML/CS316/outputString.sh
+	"	2	19
+	^	2	20
+	.	2	19
+	+	5	4
+	+	6	0
+	+	4	12
+	+	2	19
+
+> ~/HTML/CS316/1000charfile
+	"	1	0
+
+> ~/HTML/CS316/100charfile
+	"	1	0
+
+> ~/HTML/P1.txt
+	"	10	164
+	^	10	165
+	.	10	164
+	+	4	11
+	+	11	0
+	+	7	147
+	+	8	46
+	+	4	8
+	+	5	1
+	+	6	1
+	+	7	1
+	+	8	7
+	+	10	113
+	+	10	70
+	+	11	0
+	+	10	164
+
+> ~/HTML/arn_language.txt
+	"	1	6
+	^	1	7
+	.	1	7
+	+	4	7
+	+	1	7
+
+> ~/HTML/xarn_language.txt
+	"	1	0
+
 > ~/HTML/p0_basic.html
-	"	15	0
-	^	6	32
-	.	6	14
+	"	1	0
+	^	6	25
+	.	6	24
 	+	2	18
-	+	7	62
-	+	8	56
+	+	8	62
 	+	9	56
-	+	11	37
+	+	10	56
+	+	12	37
 	+	5	33
-	+	7	17
-	+	8	13
-	+	9	11
+	+	8	17
+	+	9	13
+	+	10	11
 	+	2	71
 	+	3	20
-	+	6	14
+	+	7	14
+	+	5	31
+	+	6	24
 
 > ~/.git/COMMIT_EDITMSG
 	"	2	135
 	^	2	136
 	.	2	135
 	+	2	135
-
-> ~/HTML/xarn_translate.cgi
-	"	6	0
 
 > ~/HTML/p0_python.cgi
 	"	50	59

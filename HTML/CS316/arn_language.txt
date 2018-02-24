@@ -1,0 +1,11 @@
+englishwater,spanish,agua
+xarnish,pol,english,water
+xarnish,nonk,english,ship
+xarnishgilth,english,space
+english,planet,xarnish,thark
+english,planet,spanish,planeta
+english,planet,italian,pianeta
+xarnish,hwrat,english,fly
+xarnish,loribsq,english,orbit
+english,planet,icelandic,reikistjarna
+english,planet,swahili,sayari

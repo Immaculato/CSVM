@@ -1,0 +1,24 @@
+Author: Tristan Basil
+Assignment: Program 1
+Course/Instructor: CS316-001, Paul Linton
+Outside references:
+  -http://www.pythonforbeginners.com/cheatsheet/python-file-handling for file operations - used to reference how to open/read files
+  -https://stackoverflow.com/questions/11880430/how-to-write-inline-if-statement-for-print - used to reference how to print css attributes inline
+  -https://stackoverflow.com/questions/10588317/python-function-global-variables - used to reference how to declare and properly use global variables
+  -https://stackoverflow.com/questions/5627425/what-is-a-good-way-to-handle-exceptions-when-trying-to-read-a-file-in-python - used to reference how to use try/except in python with files
+Outside collaboration: None
+Project URL: http://cs.uky.edu/~taba238/CS316/translate.html
+Project description:
+  This is an implementation of Program 1 for CS316-001. It is a simple webpage/cgi to perform direct translations using a translation file called xarn_translate.txt. The cgi accepts 3 parameters: theword, fromnative, and newlanguage; each representing the word to translate, the language from which to translate, and the language to which to translate, respectively. Using these fields, a translation will be returned in green if found, or the word 'unknown' will be displayed in red. In the event that the user provides bad input, the offending input will appear in red with the word 'invalid'.
+
+**QUESTIONS**
+1. What does your CGI do if one of the fields is completely missing (the field itself)?
+  -> If a field is completely missing, the respective user input row on the next page will appear completely in red with the word 'invalid' displayed.
+2. What does your CGI do if the value of a field is blank?
+  -> The CGI treats this field as effectively missing, so the respective user input row on the next page will appear completely in red with the word 'invalid' displayed, like in the previous question.
+3. Did you test your CGI with a client such as curl?
+  -> No, although I ran my output locally to double check my cgi's generated HTML for necessary HTML tags, and double checked the static HTML file. I had a number of test cases I would run through after any major change (manually through the webpage in a web browser).
+4. What happens if one of the field values submitted is a string of 100 characters? 1000 characters? 10000 characters?
+  -> It accepted the 100 character string just fine. 1000 characters was also fine. 10000 characters yielded a server error, which read: Request-URI Too Long The requested URL's length exceeds the capacity limit for this server.
+5. How did you test the previous question?
+  -> I wrote a quick shell script to make the string, then I copied that into the text field on my project's page (I verified the length of the string before hitting submit with an external program). 

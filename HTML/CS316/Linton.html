@@ -1,0 +1,279 @@
+<!DOCTYPE>
+<!--
+	Name:    Paul Linton
+	File:    Linton.html
+	Version: 1.1
+	Date:    2018-Feb-14
+
+
+	This is some starting code for a javascript program.
+
+-->
+<HTML>
+<TITLE>X A R N G R A M</TITLE>
+<HEAD>
+<STYLE>
+
+</STYLE>
+
+<!-- https://codereview.stackexchange.com/questions/132125/rot13-javascript -->
+<SCRIPT>
+
+const LETTER_COUNT = 8;
+const HINT_COUNT = 2;
+
+//    scramble, 1st anagram, 1st hint, 2nd anagram, 2nd hint
+var xarngrams = [
+	[ 'ABCD', 'CAB', 'taxi', 'BAD', 'not good' ],
+	[ 'AEHKT', 'EAT', 'consume food', 'HAT', 'wear on your head' ],
+	[ 'EILMSU', 'ELM', 'type of tree', 'SUM', 'add two numbers' ],
+	[ 'DEINPTU', 'PET', 'household animal', 'TEN', 'nine plus one' ],
+	[ 'PJLINTON', 'OIL', 'texas tea', 'TOP', 'opposite of bottom' ],
+	];
+
+var whichSolution = undefined;
+var whichAnagram = undefined;
+var whichGram = undefined;
+
+// this function simply outputs on console.log() if a user clicks on something
+// that is currently 'disabled'.
+function ignoreClick() {
+
+	console.log("User clicked on " + this.id + " and it was ignored.");
+
+}
+
+//
+// code to "turn on" a selected scramble.
+// str is the scrambled letters we use to form anagrams.
+// sets listeners on each letter as well.
+function doScramble(str) {
+
+	for (i = 0; i < LETTER_COUNT; i++) {
+		var which = "a"+i;
+		var lelement = document.getElementById(which);
+		var currLetter = str[i];
+		if (currLetter != undefined) {
+			lelement.innerHTML = str[i];
+			lelement.addEventListener("click", chooseLetter, false);
+		} else {
+			lelement.innerHTML = '&nbsp;';
+		}
+		//lelement.addEventListener("click", chooseAnagram, false);
+	}
+	document.getElementById("a"+LETTER_COUNT).addEventListener("click", deleteLetter, false);
+		
+	// steps
+	// 1) put a ' ' in each letter (ids a0 through a7)
+	// 2) replace the spaces with each letter in 'str' 
+	// 3) add the DEL element in the last one so players
+	//    can remove a selected letter
+	// 4) add event listening for each letter (and DEL)
+	//
+
+	// ..... redacted
+
+}
+
+// 
+//
+function activateSolution() {
+
+	console.log("User clicked on solution " + this.id + " and it was activated.");
+	giveInstructions('Click any combination of letters to create an anagram. Use a hint if you get stuck!');
+	for (i = 1; i < HINT_COUNT+1; i++) {
+		var activeid = "active"+i;
+		var activeElement = document.getElementById(activeid);
+		//activeElement.removeEventListener("click", activateSolution, false);
+		activeElement.style.backgroundColor = 'white';
+		activeElement.style.cursor = 'default';
+		var hintid = "hint"+i;
+		var hintElement = document.getElementById(hintid);
+		//if we're at the selected element, make its hint clickable, and get the anagram box.
+		if (activeid == this.id) {
+			hintElement.addEventListener("click", revealHint, false);
+			hintElement.innerHTML = 'Click for hint';
+			hintElement.style.cursor = 'pointer';
+			whichGram = document.getElementById("gram"+i);
+		} else {
+			hintElement.innerHTML = "";
+			hintElement.style.cursor = 'default';
+		}
+	}
+	this.style.backgroundColor = 'green';
+	whichSolution = this.id;
+	// Steps needed:
+	// 1) set background color to green
+	// 2) remove listeners for each activation element
+	// 3) set a global variable whichsolution to this.id
+
+	// .... code redacted
+}
+
+// This function will be called when a user selects which anagram to solve.
+//
+// There will be an object "this" that refers to the element that
+// was clicked on.
+function chooseAnagram() {
+	
+	whichAnagram = this;
+	//disable the other anagrams since we have a choosen anagram
+	for (i=1; i<xarngrams.length+1; i++) {
+		var anagramID = 'l'+i;
+		var anagram = document.getElementById(anagramID);
+		anagram.removeEventListener("click", chooseAnagram);
+		anagram.style.cursor = 'default';
+	}
+	console.log("They chose anagram id " + this.id + " which is " + this.innerHTML);
+	giveInstructions('Pick a solution to start on by clicking one of the leftmost boxes.');
+	this.style.color = 'green';
+	//scramble the chosen angram and set listeners for each letter.
+	doScramble(this.innerHTML);
+	//set listeners for the two solutions to work on, and link up their hints.
+	var active1 = document.getElementById('active1');
+	active1.addEventListener("click", activateSolution, false);
+	active1.style.cursor = 'pointer';
+	var active2 = document.getElementById('active2');
+	active2.addEventListener("click", activateSolution, false);
+	active2.style.cursor = 'pointer';
+	
+	//document.getElementById('hint1').addEventListener("click", revealHint, false);
+	//document.getElementById('hint2').addEventListener("click", revealHint, false);
+	//document.getElementById('hint1').innerHTML = 'Click for hint';
+	//document.getElementById('hint2').innerHTML = 'Click for hint';
+	//
+	// Steps needed:
+	// 1) turn "off" anagrams.  Should not be able to click on them
+	//    after selecting one.
+	// ............. code redacted
+	// 2) turn "on" the two solutions to work on by setting a click
+	//    listener for each activeX id.
+
+	// ......... code redacted
+
+	// 3) list out letters from anagram at top
+
+	// ......... code redacted
+
+	// 4) add listener to each letter
+
+	// ......... code redacted
+
+}
+
+//This function is called when the user clicks a hint.
+function revealHint() {
+	//find the xarngram in the array
+	for (i = 0; i < xarngrams.length; i++) {
+		if (whichAnagram.innerHTML == xarngrams[i][0]) {
+			if (this.id == 'hint1') {
+				this.innerHTML = xarngrams[i][2];
+				this.style.cursor = 'default';
+			} else if (this.id == 'hint2') {
+				this.innerHTML = xarngrams[i][4];
+				this.style.cursor = 'default';
+			}
+		}
+	}
+}
+
+// This function will be called when a user selects a letter from the angram.
+//
+// There will be an object "this" that refers to the element that
+// was clicked on.
+function chooseLetter() {
+	//if we don't have an active solution, don't do anything yet.
+	if (whichSolution == undefined) {
+		return;
+	}
+	//if the angram isn't maxed out, add in the chosen letter.
+	console.log("They chose letter id " + this.id + " which is " + this.innerHTML);
+	//this.style.color = 'green';
+	console.log(whichGram.innerHTML.length);
+	if (whichGram.innerHTML.length < 3) {
+		whichGram.innerHTML += this.innerHTML;
+	} else if (whichGram.innerHTML.length == 3) {
+		var chopLast = whichGram.innerHTML.substring(0, whichGram.innerHTML.length - 1);
+		chopLast += this.innerHTML;
+		whichGram.innerHTML = chopLast;
+	}
+
+}
+
+// This function will be called when a user selects delete from the angram.
+function deleteLetter() {
+	//if we don't have an active solution, don't do anything yet.
+	if (whichSolution == undefined) {
+		return;
+	}
+	if (whichGram.innerHTML.length > 0) {
+		whichGram.innerHTML = whichGram.innerHTML.substring(0, whichGram.innerHTML.length - 1);
+	}
+}
+
+
+//
+// sets the information element for user instructions.
+//
+function giveInstructions(str) {
+
+	document.getElementById('info').innerHTML = str;
+
+}
+
+
+function load() {
+
+	for (i = 1; i < xarngrams.length+1; i++) {
+		var which = "l"+i;
+		var lelement = document.getElementById(which);
+		lelement.innerHTML = xarngrams[i-1][0];
+		lelement.style.cursor = 'pointer';
+		lelement.addEventListener("click", chooseAnagram, false);
+	}
+
+	giveInstructions("Click on an anagram on the left to start!");
+
+
+
+
+}
+
+</SCRIPT>
+</HEAD>
+
+<BODY ONLOAD="load()">
+<h1 align='center'>Welcome to X A R N G R A M</h1>
+
+<TABLE id='wholescreen' width=100%>
+<TR>
+	<TD>
+		<TABLE id='leftside' width=50%>
+			<TR><TD id="l1">placeholder</TD></TR>
+			<TR><TD id="l2">placeholder</TD></TR>
+			<TR><TD id="l3">placeholder</TD></TR>
+			<TR><TD id="l4">placeholder</TD></TR>
+			<TR><TD id="l5">placeholder</TD></TR>
+		</TABLE>
+	</TD>
+	<TD>
+		<TABLE id='letters' width=50% border=2>
+				<TH id='a0'>A</TH><TH id='a1'>B</TH><TH id='a2'>C</TH>
+				<TH id='a3'>D</TH><TH id='a4'>E</TH><TH id='a5'>F</TH>
+				<TH id='a6'>G</TH><TH id='a7'>H</TH><TH id='a8'>DEL</TH>
+		</TABLE>
+		<P>
+		<TABLE id='grams' width=50% border=2>
+			<TR><TD id='active1' width=10%>&nbsp;</TD><TD id='gram1' width=15%></TD><TD
+			id='hint1' width=75%></TD></TR>
+			<TR><TD id='active2' width=10%>&nbsp;</TD><TD id='gram2'></TD><TD id='hint2'></TD></TR>
+			<TR></TR>
+		</TABLE>
+		</P>
+	</TD>
+</TR>
+</TABLE>
+<P id='info'>User instructions here!</P>
+
+</BODY>
+</HTML>

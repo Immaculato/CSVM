@@ -15,13 +15,13 @@ import cgi
 import cgitb
 
 #declare name of file
-FILENAME = "rn_language.txt"
+FILENAME = "xarn_language.txt"
 
 #declare user-facing strings
 UNKNOWN = 'unknown'
 INVALID = 'invalid'
 INVALID_FILE = 'Invalid file format. Please verify format of xarn_language.txt and try again.'
-FILE_NOT_FOUND = 'xarn_language.txt could not be found.'
+FILE_NOT_FOUND = FILENAME + ' could not be found.'
 
 #declare global flags to mark any errors
 invalidNumFields = False
@@ -44,25 +44,25 @@ def translate(word, fromLanguage, toLanguage):
     try:
         file = open(FILENAME, "r")
     except:     
-	invalidNumFields = True
-	return FILE_NOT_FOUND
+        invalidNumFields = True
+        return FILE_NOT_FOUND
 
     #for each line in the file, look for the specified language from the user.
     for line in file:
-	parsedLine = line.split(',')
-	#if there aren't 4 sections in the line, we have a bad file.
-	if len(parsedLine) != 4:
-	    invalidNumFields = True
-	    return INVALID_FILE
-	#if the specified languages are found in the file, we should check for the word.
-	if (parsedLine[0]==fromLanguage and parsedLine[2]==toLanguage and parsedLine[1] == word):
-	    return parsedLine[3].rstrip()
-	elif (parsedLine[0] == toLanguage and parsedLine[2]==fromLanguage and parsedLine[3].rstrip() == word):
-	    return parsedLine[1]
+        parsedLine = line.split(',')
+        #if there aren't 4 sections in the line, we have a bad file.
+        if len(parsedLine) != 4:
+            invalidNumFields = True
+            return INVALID_FILE
+        #if the specified languages are found in the file, we should check for the word.
+        if (parsedLine[0]==fromLanguage and parsedLine[2]==toLanguage and parsedLine[1] == word):
+            return parsedLine[3].rstrip()
+        elif (parsedLine[0] == toLanguage and parsedLine[2]==fromLanguage and parsedLine[3].rstrip() == word):
+            return parsedLine[1]
     global unknownFlag
     unknownFlag = True
     return UNKNOWN
-	
+    
 ''' printHTML(fromLanguage, toLanguage, toTranslate, translated)
 inputs: fromLanguage - the language from which to translate
         toLanguage - the language to which to translate
@@ -71,7 +71,6 @@ inputs: fromLanguage - the language from which to translate
 outputs: none, but prints HTML containing each field and that is dynamically colored based on the global error flags.
 '''
 def printHTML(fromLanguage, toLanguage, toTranslate, translated):
-   
     #output the html, using the global flags to determine colors on the output. 
     print "Content-type:text/html\n\n"
     print "<html>"
@@ -83,6 +82,7 @@ def printHTML(fromLanguage, toLanguage, toTranslate, translated):
     print ".translated{" + ("color: red;}" if invalidFlagTranslated else "}")
     print ".translatedWord{" + ("color: green;}" if (not unknownFlag and not invalidFlagTranslated and not invalidNumFields) else "color: red;}")
     print "</style></head>"
+    print "<title>Translation result</title>"
     print "<body>"
     print "<p class=\"allWords\">"
     print "<span class=\"sourceLang\"> Origin Language: " + fromLanguage + "</span><br>"
@@ -90,7 +90,7 @@ def printHTML(fromLanguage, toLanguage, toTranslate, translated):
     print "<span class=\"word\"> Original word: " + toTranslate + "</span><br>"
     print "<span class=\"translated\"> Translation: <span class=\"translatedWord\">" + translated + "</span></span><br>"
     print "</p></body></html>"
-	
+    
 def main():
     cgitb.enable()
     #grab the fields from the html form
@@ -98,26 +98,25 @@ def main():
     #parse and lower the user input, if the user provided it. otherwise mark the respective error flags and set word to 'invalid'.
     toTranslate = form.getvalue('theword')
     if (toTranslate is None):
-        toTranslate="invalid"
-	global invalidFlagWord
-	invalidFlagWord = True
+        toTranslate=INVALID
+        global invalidFlagWord
+        invalidFlagWord = True
     else:
-	toTranslate = toTranslate.lower()
+        toTranslate = toTranslate.lower()
     fromLanguage = (form.getvalue('fromnative'))
     if (fromLanguage is None):
-	fromLanguage="invalid"
+        fromLanguage=INVALID
         global invalidFlagSourceLang
-	invalidFlagSourceLang = True
+        invalidFlagSourceLang = True
     else:
-	fromLanguage = fromLanguage.lower()
+        fromLanguage = fromLanguage.lower()
     toLanguage = (form.getvalue('newlanguage'))
     if (toLanguage is None):
-	toLanguage="invalid"
-	global invalidFlagToLang
-	invalidFlagToLang = True
+        toLanguage=INVALID
+        global invalidFlagToLang
+        invalidFlagToLang = True
     else:
-	toLanguage = toLanguage.lower()
-
+        toLanguage = toLanguage.lower()
     #translate the word (or attempt to) if we got all inputs
     if (not invalidFlagWord and not invalidFlagSourceLang and not invalidFlagToLang):
         translated = translate(toTranslate, fromLanguage, toLanguage)
@@ -130,3 +129,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
