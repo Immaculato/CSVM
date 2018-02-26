@@ -7,6 +7,10 @@
 
 	Program 2 for CS316. A simple anagram solving game implemented with javascript.
 
+	Resources used:
+	https://codereview.stackexchange.com/questions/132125/rot13-javascript, for using arrays in JS
+	https://www.w3schools.com/cssref/pr_class_cursor.asp, for how to make an element 'clickable'
+
 -->
 <HTML>
 <TITLE>X A R N G R A M</TITLE>
@@ -15,7 +19,6 @@
 
 </STYLE>
 
-<!-- https://codereview.stackexchange.com/questions/132125/rot13-javascript -->
 <SCRIPT>
 
 const LETTER_COUNT = 8;
@@ -44,7 +47,6 @@ function ignoreClick() {
 
 }
 
-//
 // code to "turn on" a selected scramble.
 // str is the scrambled letters we use to form anagrams.
 // sets listeners on each letter as well.
@@ -63,21 +65,10 @@ function doScramble(str) {
 		//lelement.addEventListener("click", chooseAnagram, false);
 	}
 	document.getElementById("a"+LETTER_COUNT).addEventListener("click", deleteLetter, false);
-		
-	// steps
-	// 1) put a ' ' in each letter (ids a0 through a7)
-	// 2) replace the spaces with each letter in 'str' 
-	// 3) add the DEL element in the last one so players
-	//    can remove a selected letter
-	// 4) add event listening for each letter (and DEL)
-	//
-
-	// ..... redacted
 
 }
 
-// 
-//
+//activates one of two solutions that the user can solve
 function activateSolution() {
 
 	console.log("User clicked on solution " + this.id + " and it was activated.");
@@ -113,13 +104,7 @@ function activateSolution() {
 		}
 	}
 	document.getElementById("a"+LETTER_COUNT).style.cursor = 'pointer';
-	
-	// Steps needed:
-	// 1) set background color to green
-	// 2) remove listeners for each activation element
-	// 3) set a global variable whichsolution to this.id
 
-	// .... code redacted
 }
 
 // This function will be called when a user selects which anagram to solve.
@@ -277,6 +262,7 @@ function submit() {
         }
 }
 
+//resets the game between rounds
 function reset() {
 	for (i = 1; i < xarngrams.length+1; i++) {
 		var which = "l"+i;
@@ -327,9 +313,6 @@ function load() {
 	document.getElementById('solved').style.display = 'none';
 
 	giveInstructions("Click on an anagram on the left to start!");
-
-
-
 
 }
 
